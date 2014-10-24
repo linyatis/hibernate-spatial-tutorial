@@ -20,13 +20,16 @@ public class EventManager {
 
 		if (args[0].equals("store")) {
 			mgr.createAndStoreEvent("My Event", new Date(), assemble(args));
-		} /*
-		 * else if (args[0].equals("find")) { List events = mgr.find(args[1]);
-		 * for (int i = 0; i < events.size(); i++) { Event event = (Event)
-		 * events.get(i); System.out.println("Event: " + event.getTitle() +
-		 * ", Time: " + event.getDate() + ", Location: " + event.getLocation());
-		 * } }
-		 */
+		} else if (args[0].equals("find")) {
+			List events = mgr.find(assemble(args));
+			for (int i = 0; i < events.size(); i++) {
+				Event event = (Event) events.get(i);
+				System.out.println("Event: " + event.getTitle() + ", Time: "
+						+ event.getDate() + ", Location: "
+						+ event.getLocation());
+			}
+		}
+
 		JPAUtil.close();
 	}
 

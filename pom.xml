@@ -12,7 +12,6 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<hibernate.version>4.0.0.Final</hibernate.version>
 		<hibernate.em.version>4.0.0.Final</hibernate.em.version>
 		<hibernate.spatial.version>4.0-M1</hibernate.spatial.version>
 
