@@ -1,0 +1,89 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.hibernate.spatial.tutorials</groupId>
+	<artifactId>event-tutorial</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>event-tutorial</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<hibernate.version>4.0.0.Final</hibernate.version>
+		<hibernate.em.version>4.0.0.Final</hibernate.em.version>
+		<hibernate.spatial.version>4.0-M1</hibernate.spatial.version>
+
+		<postgre.version>8.4-701.jdbc3</postgre.version>
+		<postgre.groupId>postgresql</postgre.groupId>
+		<postgis.version>1.5.2</postgis.version>
+	</properties>
+
+	<build>
+		<finalName>${project.artifactId}</finalName>
+		<plugins>
+			<plugin>
+				<version>2.3.2</version>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+
+		<!-- Hibernate Spatial -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-spatial</artifactId>
+			<version>${hibernate.spatial.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.em.version}</version>
+		</dependency>
+
+		<!-- the postgresql driver -->
+		<dependency>
+			<groupId>${postgre.groupId}</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${postgre.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.postgis</groupId>
+			<artifactId>postgis-jdbc</artifactId>
+			<version>${postgis.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.5.11</version>
+		</dependency>
+	</dependencies>
+
+	<!-- add repositories for JTS and Hibernate Spatial and Hibernate (JBoss) -->
+	<repositories>
+		<repository>
+			<id>OSGEO GeoTools repo</id>
+			<url>http://download.osgeo.org/webdav/geotools</url>
+		</repository>
+		<repository>
+			<id>Hibernate Spatial repo</id>
+			<url>http://www.hibernatespatial.org/repository</url>
+		</repository>
+		<!-- add JBOSS repository for easy access to Hibernate libraries -->
+		<repository>
+			<id>JBOSS</id>
+			<url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
+		</repository>
+	</repositories>
+</project>
+
