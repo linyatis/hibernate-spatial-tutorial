@@ -1,13 +1,13 @@
 Working project for Hibernate Spatial 4 Tutorial 
 ================================================
 
-This project is based on [Hibernate Spatial 4 Tutorial][1], working with PostgreSQL + PostGIS (but you can also use with others databases, just change the [dialect][2] in persistence.xml.
+This project is based on [Hibernate Spatial 4 Tutorial][1], working with PostgreSQL + PostGIS (but you can also use with others databases, just change the [dialect][2] in persistence.xml).
 
 Follow these instructions to run this project:
 
 ###Preparing database
-1. Create database hstutorial
-Note: if needed, change url, username and password for you database connection, into persistence.xml.
+1. Create database hstutorial  
+*Note: if needed, change url, username and password for you database connection, into persistence.xml.*
 
 2. In hstutorial database, run psql `CREATE EXTENSION postgis;`
 
