@@ -2,13 +2,21 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.hibernate.spatial.tutorials</groupId>
-	<artifactId>event-tutorial</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<groupId>br.eng.flyra.hibernate</groupId>
+	<artifactId>hibernate-spatial-tutorial</artifactId>
+	<version>1.1</version>
 	<packaging>jar</packaging>
 
-	<name>event-tutorial</name>
-	<url>http://maven.apache.org</url>
+	<name>hibernate-spatial-tutorial</name>
+	<url>https://github.com/linyatis/hibernate-spatial-tutorial.git</url>
+
+	<developers>
+		<developer>
+			<name>José Filipe Lyra</name>
+			<email>linyatis@gmail.com</email>
+			<url>https://github.com/linyatis</url>
+		</developer>
+	</developers>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
