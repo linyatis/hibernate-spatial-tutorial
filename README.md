@@ -20,14 +20,14 @@ mvn compile
 ```
 
 ###Running application
-1. Save some data:
-```
-mvn exec:java -Dexec.mainClass="event.EventManager" -Dexec.args="store POINT(10 5)"
-```
-2. Select points inside a polygon:
-```
-mvn exec:java -Dexec.mainClass="event.EventManager" -Dexec.args="find POLYGON((1\ 1,20\ 1,20\ 20,1\ 20,1\ 1))"
-```
+1. Save some data:  
+    ```
+    mvn exec:java -Dexec.mainClass="event.EventManager" -Dexec.args="store POINT(10 5)"
+    ```
+2. Select points inside a polygon:  
+    ```
+    mvn exec:java -Dexec.mainClass="event.EventManager" -Dexec.args="find POLYGON((1\ 1,20\ 1,20\ 20,1\ 20,1\ 1))"
+    ```
 3. Be happy =)
 
 [1]: http://www.hibernatespatial.org/documentation/02-Tutorial/01-tutorial4/
